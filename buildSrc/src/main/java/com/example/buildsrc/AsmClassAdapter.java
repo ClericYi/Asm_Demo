@@ -1,6 +1,7 @@
 package com.example.buildsrc;
 
 
+import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
@@ -16,7 +17,15 @@ public class AsmClassAdapter extends ClassVisitor implements Opcodes {
 
     @Override
     public MethodVisitor visitMethod(int access, String name, String descriptor, String signature, String[] exceptions) {
+//        System.out.println(descriptor);
         MethodVisitor mv = super.visitMethod(access, name, descriptor, signature, exceptions);
-        return (mv == null) ? null : new AsmMethodVisitor(mv);
+        return (mv == null) ? null : new AsmMethodVisitor(mv, access, name, descriptor) ;
+    }
+
+    @Override
+    public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
+        System.out.println(descriptor);
+        AnnotationVisitor av = super.visitAnnotation(descriptor, visible);
+        return (av == null) ? null : new AsmAnnotationVisitor(av) ;
     }
 }

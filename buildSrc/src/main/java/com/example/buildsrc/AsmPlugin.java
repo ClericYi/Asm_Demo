@@ -14,6 +14,7 @@ public class AsmPlugin implements Plugin<Project> {
     public void apply(Project project) {
         System.out.println("===========  doing  ============");
         AppExtension appExtension = project.getExtensions().findByType(AppExtension.class);
+        assert appExtension != null;
         appExtension.registerTransform(new AsmTransform(project));
     }
 }

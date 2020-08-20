@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: builder-3.5.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.5.4/287ffb45bab7531f677cb1411b1f157b43d1f4ab/builder-3.5.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.5.4/35ca307c0bdf35b2133fc602b0954ae22c6797c9/builder-3.5.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

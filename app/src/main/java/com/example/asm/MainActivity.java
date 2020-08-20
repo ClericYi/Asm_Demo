@@ -14,5 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.e("aa","aa");
     }
-
+    @Cat
+    public void fun(){}
+    @ASM
+    public void fun1(){}
 }

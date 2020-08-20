@@ -118,9 +118,9 @@ public class AsmTransform extends Transform {
         try {
             FileInputStream is = new FileInputStream(inputPath);
             ClassReader cr = new ClassReader(is);
-            ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+            ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
             AsmClassAdapter adapter = new AsmClassAdapter(cw);
-            cr.accept(adapter, 0);
+            cr.accept(adapter, ClassReader.EXPAND_FRAMES);
             FileOutputStream fos = new FileOutputStream(outputPath);
             fos.write(cw.toByteArray());
             fos.close();
