@@ -1,7 +1,7 @@
 import com.example.buildsrc.AsmPlugin
 
 apply plugin: 'com.android.application'
-apply plugin: AsmPlugin
+apply plugin: 'AsmPlugin'
 
 android {
     compileSdkVersion 30
